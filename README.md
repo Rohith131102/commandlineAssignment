@@ -11,7 +11,7 @@ We have used the following commands to fetch the desired details, each command i
 | Command  | Function |
 | ------------- | ------------- |
 |$(date "+Date(y-m-d): %Y-%m-%d%n")| Command to fetch the date
-|$(date "+Time(h:m:s): %H:%M:%S") | Command to fetch the time
+|$(date "+Time(h : m : s): %H:%M:%S") | Command to fetch the time
 |$(whoami) | Command to fetch the current working user
 |$(echo $HOME) | Command to fetch the Home directory
 |$(pwd) | Command to fetch the current wokring directory
