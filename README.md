@@ -16,7 +16,8 @@ We have used the following commands to fetch the desired details, each command i
 |$(echo $HOME) | Command to fetch the Home directory
 |$(pwd) | Command to fetch the current wokring directory
 
-
+#### Test Run
+![image](https://user-images.githubusercontent.com/123619674/216590320-5a43d6ef-8251-40cf-8347-e1f292facdd8.png)
 
 
 ### Question - 2
@@ -25,33 +26,18 @@ Write a bash script (name Table.sh) to print the Table of a number by using a wh
   - If you don’t input any data, then display an error message to execute the script correctly.
 
 #### Apporach - 
-
-We verify whether any arguments have been passed, and if not, we issue an error and quit the programme with exit status 1. If not, we run a loop to print all the arguments passed, then another while loop on all the arguments, start a counter internally on the second while loop, increment it after each iteration, fetch the result, and repeat this internal loop for each element in the arguments list until the counter value is less than 10, at which point the programme ends.
-
-
-n=$1 # Intiliaing the first argument as n
-c=1 # Counter Variable
-echo "Given number - $n"
-echo "Table of $n:"
-# Using while loop to generate the table
-while [ $c -le 10 ] # while counter is less than 10
-do
-  result=$(( $n * $c )) # Calculating the product
-  echo "$n x $c = $result" # Printing the product
-  c=$(( $c + 1 )) # Incrementing the counter
-done
-
-exit 0
-
+We check to see whether any arguments have been supplied; if not, we generate an error and terminate the programme with exit status 1. If not, we run a loop to print all of the arguments that were passed, then another while loop on all of the arguments, start a counter internally on the second while loop, increment it after each iteration, fetch the result, and repeat this internal loop for each element in the arguments list until the counter value is less than 10, at which point the programme ends.
 
 #### Test run - 
-
 ###### Scenorio - 1
 When no arguments are passed
+![image](https://user-images.githubusercontent.com/123619674/216591865-37507429-566e-4c3b-8f5c-5197cc598026.png)
 
 
 ###### Scenorio - 3
 When more than 1 arguments are passed
+![image](https://user-images.githubusercontent.com/123619674/216591944-6aa7acac-1faf-469c-bee5-4e143eea65af.png)
+
 
 
 ### Question - 3
@@ -59,12 +45,12 @@ Write a Function in bash script to check if the number is prime or not? It shoul
           - The script should accept the input from the User.
 #### Apporach - 
 
-We created a function called `is prime` to determine whether a number is prime or not. If the number is greater than 2, we indicate that it is not a prime, and if not, we run a loop from `2` to `number/2` to see if any of the above numbers divide the given number. If we found any numbers, we can conclude that the number is not a prime because it has a divisor other than 1 and itself.
+We created a function called `isPrime` to determine whether a number is prime or not. If the number is less than 0, we indicate that it is negative number and requeusts user to enter only a positive number, and if entered number is 1,we write a special case saying 1 is not a ptime and if user enters any number greater than 1, we run a loop from `2` to `number/2` to see if any of the above numbers divide the given number. If we found any numbers, we can conclude that the number is not a prime because it has a divisor other than 1 and itself and if it exits the while loop .then we print that it is prime
 
 We receive user input in the main code, store it in a variable, and then call the function while sending the argument as command line arguments.
 
 #### Test run - 
-
+![image](https://user-images.githubusercontent.com/123619674/216595248-e887652f-1517-4c28-b34e-a02cd6c4560f.png)
 
 
 ### Question - 4
@@ -87,12 +73,10 @@ We have used the following commands to meet the desired requirements and the fun
 | ls -la ~/Desktop/ | Printing files and folders in Desktop |
 
 #### Test run - 
-
+![image](https://user-images.githubusercontent.com/123619674/216596095-f55ab189-f67b-4769-8bf9-99c28d83296a.png)
 
 Text in File1.txt
-
-
-Text in Table.sh
+![image](https://user-images.githubusercontent.com/123619674/216596420-ace33314-0e03-4245-8f30-6f3242c7b880.png)
 
 
 ### Question - 5
@@ -109,23 +93,23 @@ We have declared the array internally in the code, we have used the following co
 
 | Command  | Function |
 | ------------- | ------------- |
-| echo ${#arr[@]} | Length of the array|
+| echo ${#numbersList[@]} | Length of the array|
 
 We have made two methods to find the max and min elements in the given array.
 #### Method - 1
+We use a for loop to get the maximum and minimum element.
+
+
+#### Method - 2
 In order to discover the maximum and minimum elements in the given array, we utilised the sort function. For the maximum, we sorted the array in reverse order and used the head1 command to collect the first member.
 | Command  | Function |
 | ------------- | ------------- |
 | IFS=$'\n' | Internal field separator |
-| echo "${arr[*]}" \| sort -nr \| head -n1 | Sorting in reverse and fetch the first element |
-| echo "${arr[*]}" \| sort -n \| head -n1 | Sorting  and fetch the first element |
+| echo "${numbersList[*]}" \| sort -nr \| head -n1 | Sorting in reverse and fetch the first element |
+| echo "${numbersList[*]}" \| sort -n \| head -n1 | Sorting  and fetch the first element |
 
-#### Method - 2
-
-We use a for loop to get the maximum and minimum element. Using the first element as the maximum, we traverse each element in the loop to see whether it is greater than the maximum value we have assumed.
-
-
-done
 
 #### Test run - 
+array = (2 3 4 1 6 7)
+![image](https://user-images.githubusercontent.com/123619674/216597357-568d04f0-4bbb-4cd6-bd56-9b8e28ad5d40.png)
 
