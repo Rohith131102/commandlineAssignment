@@ -45,7 +45,7 @@ Write a Function in bash script to check if the number is prime or not? It shoul
           - The script should accept the input from the User.
 #### Apporach - 
 
-We created a function called `isPrime` to determine whether a number is prime or not. If the number is less than 0, we indicate that it is negative number and requeusts user to enter only a positive number, and if entered number is 1,we write a special case saying 1 is not a ptime and if user enters any number greater than 1, we run a loop from `2` to `number/2` to see if any of the above numbers divide the given number. If we found any numbers, we can conclude that the number is not a prime because it has a divisor other than 1 and itself and if it exits the while loop .then we print that it is prime
+We created a function called `isPrime` to determine whether a number is prime or not. If the number is less than 0, we indicate that it is negative number and requeusts user to enter only a positive number, and if entered number is 1,we write a special case saying 1 is not a ptime and if user enters any number greater than 1, we run a loop from `2` to `sqrt(num)` to see if any of the above numbers divide the given number. If we found any numbers, we can conclude that the number is not a prime because it has a divisor other than 1 and itself and if it exits the while loop .then we print that it is prime
 
 We receive user input in the main code, store it in a variable, and then call the function while sending the argument as command line arguments.
 
@@ -59,7 +59,7 @@ Create a bash script that supports the following requirement.
   - Create a file ‘File1.txt’ inside ‘Assignment’ Folder.
   - Copy all the content of Table.sh(2nd script) in ‘File1.txt’ without using ‘cp’ and ‘mv’ command.
   - Append the text Welcome to Sigmoid’ to the ‘File1.txt’ file.
-  - List all the directories and files present inside Desktop Folder.#### Apporach - 
+  - List all the directories and files present inside Desktop Folder.
 
 #### Approach - 
 
