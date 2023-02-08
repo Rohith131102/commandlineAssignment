@@ -11,7 +11,7 @@ function isPrime() {
     return 
   fi
 	 
-  for (( i=2; i<$((num/2+1)); i++ )) # Loop from 2 to num/2 to verify its divisors
+  for (( i=2;i*i<=num;i++ )) # Loop from 2 to num/2 to verify its divisors
   do
     if [ $(($num%$i)) -eq 0 ]; then # if found it is not prime number
       echo "$num is not a prime number."
