@@ -1,0 +1,164 @@
+  COMMAND LINE ASSIGNMENT
+                                             PEER LEARNING DOCUMENT
+
+Problem Statement - 		 	 	 		
+Question 1. Write a bash script to get the current date, time, username, home directory and current working directory.						
+Question 2. Write a bash script (name Table.sh) to print the Table of a number by using a while loop. It should support the following requirements.		
+● The script should accept the input from the command line.
+● If you don’t input any data, then display an error message to execute the script correctly.						
+Question 3. Write a Function in bash script to check if the number is prime or not? It should support the following requirement.				
+● The script should accept the input from the User.
+Question 4. Create a bash script that supports the following requirement.			
+	●  Create a folder ‘Assignment’. 							
+	●  Create a file ‘File1.txt’ inside ‘Assignment’ Folder.
+	●  Copy all the content of Table.sh in ‘File1.txt’ without using ‘cp’ and ‘mv’ command.
+	●  Append the text Welcome to Sigmoid’ to the ‘File1.txt’ file.
+	●  List all the directories and files present inside Desktop Folder.
+ 								
+Question 5. You have given an array. Using Bash script, print its length, maximum element, and minimum element.
+arr=( 2 3 4 1 6 7). 
+ 							
+						 					
+				
+			
+		
+						
+Aswat Bisht
+
+Approach - 
+
+Question - 1
+He had used the following commands to fetch the desired details
+
+Command
+Function
+$(date +'%m/%d/%Y')
+Command to fetch the date
+$(date +%r)
+Command to fetch the time
+$USER
+Command to fetch the current working user
+$HOME
+Command to fetch the Home directory
+$pwd
+Command to fetch the current working directory
+
+
+He displayed them on the screen using echo command.
+
+Question - 2
+The written script is capable of accepting input from the command line. If no arguments have been given, it reports an error and exits the program. If not, then he initialized a counter and take a run a while loop till is less than equal to 10 and displays the fetched result by multiplying and updating the counter in every iteration
+
+Question - 3
+User input is taken  and saved in a variable in the main program code and then passed to the function.
+
+To determine whether an integer is prime or not, He developed a function called isPrime. if number is less than 2 ,then the function returns displaying that number is not prime ,if not , he runs a loop from 2 to sqrt(n) to see whether any of the other numbers divide the supplied number (inclusive of both). If any numbers were found he incremented the counter which resembles no of factors for the given number, and if the no of factors is greater than or equal to 1 which means we can assume that they are not prime because they have a divisor other than themselves and 1, which means they are not prime. Else if it is 0 they are prime as they have zero divisors.
+
+
+
+
+Question - 4
+He had used the following commands to solve the problem.
+Command
+Function
+mkdir Assignment	 
+Creating folder using mkdir
+touch ./Assignment/File1.txt 
+Creating file using touch
+cat table.sh >> ./Assignment/file.txt
+Copying data in q2 to file1 using cat
+echo "Welcome to Sigmoid" >> ./Assignment/file.txt
+Appending given text to file1
+
+
+ls ~/Desktop/
+Printing files and folders in Desktop
+
+		
+He had used the cat command to copy the text as it reads the content from the file and he passed it to append it to the required file.
+
+Question - 5
+To obtain the highest and minimum element, He used a for loop. He traversed each element in the loop, using -1  as the maximum and minimum as 1000 , to determine whether it is greater than the maximum value we have presumptively determined if yes he changed it to the current element else and continue traversing. The same he followed for finding the minimum.
+
+
+
+Ashish Chouhan
+Approach - 
+Question - 1
+He had used the following commands to fetch the desired details
+
+Command
+Function
+$(date +'%m/%d/%Y')
+Command to fetch the date
+$(date +%r)
+Command to fetch the time
+$USER
+Command to fetch the current working user
+$HOME
+Command to fetch the Home directory
+$pwd
+Command to fetch the current wokring directory
+
+
+He displayed them on the screen using echo command.
+Question - 2
+
+The written script is capable of accepting input from the command line. If no arguments or invalid argument(i.e not a number) have been given, it reports an error and exits the program. If not, then he initialized a counter and take a run a while loop till is less than equal to 10 and displays the fetched result by multiplying and updating the counter in every iteration.
+
+Question - 3
+User input is taken and saved in a variable in the main program code and then passed to the function.
+
+To determine whether an integer is prime or not, He developed a function called isPrime.he runs a loop from 1 to sqrt(n) to see whether any of the other numbers divide the supplied number (inclusive of both). If any numbers were found he incremented the counter which resembles no of factors for the given number, and if the no of factors is greater than 2 which means we can assume that they are not prime because they have a divisor other than themselves and 1, which means they are not prime. Else if it is 2 then num is prime as it has only 2 divisors (1 and itself).
+
+He ignored the case when number is 0.It throws an error “ 0%0: division by 0 (error token is "0")”.A special case for ‘0’ should have been written.
+
+
+
+Question - 4
+
+He had used the following commands to solve the problem.
+Command
+Function
+mkdir Assignment	 
+Creating folder using mkdir
+touch Assignment/File1.txt 
+Creating file using touch
+cat table.sh >> ./Assignment/file.txt
+Copying data in q2 to file1 using cat
+echo "Welcome to Sigmoid" >> Assignment/file.txt
+Appending given text to file1
+
+
+for file in ~/Desktop/*
+do
+    echo $(basename $file)
+done
+Printing files and folders in Desktop
+
+		
+He had used the cat command to copy the text as it reads the content from the file and he passed it to append it to the required file.
+
+
+Question - 5
+
+He utilized a for loop to obtain the highest and lowest element. Using the initial element in the loop as the maximum, he traversed each element in the loop to check if it was bigger than the maximum value that had, presumably, been determined. If it was, he set it to the current element; otherwise, he continued traversing. He used the same procedure to determine the minimum.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
